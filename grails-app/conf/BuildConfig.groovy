@@ -27,9 +27,7 @@ grails.project.dependency.resolution = {
 	log 'warn'
 
 	repositories {
-		grailsCentral()
-		mavenLocal()
-		mavenCentral()
+        mavenRepo name: 'Skillz Nexus Grails Repository', url: 'http://nexus.skillz.com/content/groups/grails'
 	}
 
 	dependencies {
@@ -104,3 +102,7 @@ grails.project.dependency.resolution = {
         compile ':spring-security-core:2.0-RC4'
 	}
 }
+
+grails.project.repos.snapshots.url = 'http://nexus.skillz.com/content/repositories/snapshots/'
+grails.project.repos.default = 'snapshots'
+grails.release.scm.enabled = false
